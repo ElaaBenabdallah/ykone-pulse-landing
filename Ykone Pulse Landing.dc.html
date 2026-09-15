@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/classical-d23ae9e6-1173-4d13-8678-c885c65ba635/styles.css">
+<script src="_ds/classical-d23ae9e6-1173-4d13-8678-c885c65ba635/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+:root{ --pulse:#e8204a; --pulse-hi:#ff5f7e; --ink:#0b0a0b; --ink-2:#121011; --line:rgba(255,255,255,0.10); }
+html{ scroll-behavior:smooth; }
+body{ margin:0; background:var(--ink); color:#f4f1ef; font-family:var(--font-body); }
+a{ color:var(--pulse-hi); text-decoration:none; }
+a:hover{ color:#fff; }
+::selection{ background:rgba(232,32,74,0.35); }
+:focus-visible{ outline:2px solid var(--pulse-hi); outline-offset:3px; }
+@keyframes pulseBar{ 0%{opacity:.55} 50%{opacity:1} 100%{opacity:.55} }
+</style>
+</helmet>
+
+<div style="background:var(--ink); min-height:100vh; overflow-x:hidden;">
+
+  <header style="position:sticky; top:0; z-index:50; display:flex; align-items:center; gap:28px; padding:16px clamp(20px,5vw,64px); background:rgba(11,10,11,0.82); backdrop-filter:blur(14px); border-bottom:1px solid var(--line);">
+    <div style="display:flex; flex-direction:column; gap:3px; margin-right:auto;">
+      <div style="display:flex; align-items:baseline; gap:8px;">
+        <span style="font-family:var(--font-heading); font-size:23px; letter-spacing:0.04em;">YKONE</span>
+        <span style="color:rgba(255,255,255,0.28); font-size:15px;">/</span>
+        <span style="font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:var(--pulse-hi);">Pulse</span>
+      </div>
+      <span style="font-size:9.5px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.34);">Influencer Perception Intelligence</span>
+    </div>
+    <nav style="display:flex; gap:26px; align-items:center;">
+      <a href="#problem" style="font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.55);">Why</a>
+      <a href="#score" style="font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.55);">The Score</a>
+      <a href="#platform" style="font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.55);">Platform</a>
+      <a href="#roadmap" style="font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.55);">Roadmap</a>
+      <a href="#close" style="display:inline-flex; align-items:center; gap:7px; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:#fff; border:1px solid var(--pulse); border-radius:999px; padding:9px 17px;" style-hover="background:rgba(232,32,74,0.16); border-color:var(--pulse-hi);">Analyse a post</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section style="position:relative; padding:clamp(72px,11vw,148px) clamp(20px,5vw,64px) clamp(56px,8vw,104px);">
+    <div style="position:absolute; inset:0; background:radial-gradient(1100px 520px at 18% 0%, rgba(232,32,74,0.20), transparent 62%), radial-gradient(760px 420px at 96% 30%, rgba(232,32,74,0.10), transparent 60%); pointer-events:none;"></div>
+    <div style="position:relative; max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(32px,5vw,72px); align-items:end;">
+      <div>
+        <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:var(--pulse-hi); margin-bottom:26px;">Brand–Influencer Fit Intelligence</div>
+        <h1 data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .8s ease .06s, transform .8s cubic-bezier(.2,.7,.2,1) .06s; margin:0; font-family:var(--font-heading); font-weight:400; font-size:clamp(46px,7.2vw,96px); line-height:0.98; letter-spacing:-0.02em;">Measure the <em style="font-style:italic; color:var(--pulse-hi);">subtext</em> behind influence.</h1>
+        <p data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .8s ease .14s, transform .8s cubic-bezier(.2,.7,.2,1) .14s; max-width:56ch; margin:34px 0 0; font-size:17.5px; line-height:1.72; color:rgba(255,255,255,0.68);">Paste a TikTok or Instagram post URL. Pulse reads the public comments, interprets multilingual audience reaction, and returns an Influencer Perception Score — a weighted read of sentiment, authenticity, engagement quality and brand affinity.</p>
+      </div>
+      <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .8s ease .2s, transform .8s cubic-bezier(.2,.7,.2,1) .2s; border:1px solid var(--line); border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.012)); padding:clamp(22px,3vw,34px);">
+        <div style="font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.40); margin-bottom:12px;">TikTok or Instagram URL</div>
+        <input class="input" type="text" placeholder="https://www.tiktok.com/@creator/video/…" style="width:100%; box-sizing:border-box; font-family:var(--font-body); font-size:14.5px; color:#fff; background:rgba(255,255,255,0.04); border:1px solid rgba(232,32,74,0.45); border-radius:8px; padding:15px 16px;">
+        <a href="#platform" style="display:flex; align-items:center; justify-content:center; gap:10px; margin-top:14px; padding:15px 18px; border-radius:8px; background:linear-gradient(180deg, var(--pulse-hi), var(--pulse)); color:#fff; font-size:11.5px; letter-spacing:0.2em; text-transform:uppercase;" style-hover="filter:brightness(1.08);">Analyse perception →</a>
+        <div style="height:1px; background:var(--line); margin:26px 0 20px;"></div>
+        <div style="font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.40); margin-bottom:14px;">What the score weighs</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+          <div style="border:1px solid var(--line); border-radius:8px; padding:12px 13px;">
+            <div style="font-family:var(--font-heading); font-size:19px; color:var(--pulse-hi);">40%</div>
+            <div style="font-size:12.5px; line-height:1.45; color:rgba(255,255,255,0.62); margin-top:4px;">Sentiment polarity × emotional intensity</div>
+          </div>
+          <div style="border:1px solid var(--line); border-radius:8px; padding:12px 13px;">
+            <div style="font-family:var(--font-heading); font-size:19px; color:var(--pulse-hi);">20%</div>
+            <div style="font-size:12.5px; line-height:1.45; color:rgba(255,255,255,0.62); margin-top:4px;">Trust and authenticity signals</div>
+          </div>
+          <div style="border:1px solid var(--line); border-radius:8px; padding:12px 13px;">
+            <div style="font-family:var(--font-heading); font-size:19px; color:var(--pulse-hi);">20%</div>
+            <div style="font-size:12.5px; line-height:1.45; color:rgba(255,255,255,0.62); margin-top:4px;">Engagement quality and comment depth</div>
+          </div>
+          <div style="border:1px solid var(--line); border-radius:8px; padding:12px 13px;">
+            <div style="font-family:var(--font-heading); font-size:19px; color:var(--pulse-hi);">20%</div>
+            <div style="font-size:12.5px; line-height:1.45; color:rgba(255,255,255,0.62); margin-top:4px;">Brand affinity in mentioned comments</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROBLEM ===== -->
+  <section id="problem" style="padding:clamp(64px,9vw,128px) clamp(20px,5vw,64px); border-top:1px solid var(--line); background:var(--ink-2);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(28px,5vw,72px); align-items:start;">
+        <div>
+          <div style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:var(--pulse-hi); margin-bottom:22px;">The decision</div>
+          <h2 style="margin:0; font-family:var(--font-heading); font-weight:400; font-size:clamp(34px,4.4vw,60px); line-height:1.04; letter-spacing:-0.015em;">Every campaign narrows to one question, answered on instinct.</h2>
+        </div>
+        <div>
+          <p style="margin:0; font-size:17px; line-height:1.8; color:rgba(255,255,255,0.68); text-align:justify; hyphens:auto;">Hundreds of clients, each with a specific budget and a distinct objective, funnel into a single choice made by one account manager: which influencer. Today that choice rests on gut feel rather than verifiable consumer perception — and the market is oversaturated enough that a follower count tells you almost nothing meaningful.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:28px;">
+            <span style="font-size:12px; letter-spacing:0.02em; color:rgba(255,255,255,0.72); border:1px solid var(--line); border-radius:999px; padding:8px 15px;">Hundreds of clients</span>
+            <span style="font-size:12px; letter-spacing:0.02em; color:rgba(255,255,255,0.72); border:1px solid var(--line); border-radius:999px; padding:8px 15px;">Specific budgets</span>
+            <span style="font-size:12px; letter-spacing:0.02em; color:rgba(255,255,255,0.72); border:1px solid var(--line); border-radius:999px; padding:8px 15px;">Distinct objectives</span>
+            <span style="font-size:12px; letter-spacing:0.02em; color:#fff; border:1px solid var(--pulse); border-radius:999px; padding:8px 15px;">→ Which influencer?</span>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .7s ease .08s, transform .7s cubic-bezier(.2,.7,.2,1) .08s; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:0; margin-top:clamp(48px,7vw,96px); border-top:1px solid var(--line);">
+        <div style="padding:clamp(28px,4vw,48px) clamp(24px,3.4vw,52px) clamp(28px,4vw,48px) 0; border-right:1px solid var(--line);">
+          <div style="font-size:10.5px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.40); margin-bottom:22px;">Traditional KPIs</div>
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div style="font-family:var(--font-heading); font-size:clamp(24px,2.6vw,34px); color:rgba(255,255,255,0.40);">Reach &amp; follower count</div>
+            <div style="font-family:var(--font-heading); font-size:clamp(24px,2.6vw,34px); color:rgba(255,255,255,0.40);">Likes &amp; views</div>
+            <div style="font-family:var(--font-heading); font-size:clamp(24px,2.6vw,34px); color:rgba(255,255,255,0.40);">Engagement rate</div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:9px; margin-top:28px;">
+            <span style="font-size:13px; color:rgba(255,255,255,0.52);">Measures passive consumption</span>
+            <span style="font-size:13px; color:rgba(255,255,255,0.52);">Treats all interactions equally</span>
+            <span style="font-size:13px; color:rgba(255,255,255,0.52);">Measures potential, not impact</span>
+          </div>
+        </div>
+        <div style="padding:clamp(28px,4vw,48px) 0 clamp(28px,4vw,48px) clamp(24px,3.4vw,52px);">
+          <div style="font-size:10.5px; letter-spacing:0.22em; text-transform:uppercase; color:var(--pulse-hi); margin-bottom:22px;">Perception intelligence</div>
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div style="font-family:var(--font-heading); font-size:clamp(24px,2.6vw,34px); color:#fff;">Sentiment</div>
+            <div style="font-family:var(--font-heading); font-size:clamp(24px,2.6vw,34px); color:#fff;">Trust</div>
+            <div style="font-family:var(--font-heading); font-size:clamp(24px,2.6vw,34px); color:#fff;">Authenticity</div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:9px; margin-top:28px;">
+            <span style="font-size:13px; color:rgba(255,255,255,0.72);">Quantifies human emotion</span>
+            <span style="font-size:13px; color:rgba(255,255,255,0.72);">Measures true audience resonance</span>
+            <span style="font-size:13px; color:rgba(255,255,255,0.72);">Actionable, campaign to campaign</span>
+          </div>
+        </div>
+      </div>
+
+      <blockquote data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .7s ease .12s, transform .7s cubic-bezier(.2,.7,.2,1) .12s; margin:clamp(44px,6vw,80px) 0 0; padding:clamp(28px,4vw,44px) 0 0; border-top:1px solid var(--line); font-family:var(--font-heading); font-weight:400; font-style:italic; font-size:clamp(26px,3.6vw,46px); line-height:1.22; letter-spacing:-0.015em; max-width:22ch; color:#fff;">Gut feel is not a strategy.</blockquote>
+    </div>
+  </section>
+
+  <!-- ===== THE SIGNAL ===== -->
+  <section style="padding:clamp(64px,9vw,128px) clamp(20px,5vw,64px); border-top:1px solid var(--line);">
+    <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(32px,5vw,80px); align-items:center;">
+      <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1);">
+        <div style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:var(--pulse-hi); margin-bottom:22px;">The untapped signal</div>
+        <h2 style="margin:0 0 26px; font-family:var(--font-heading); font-weight:400; font-size:clamp(34px,4.4vw,58px); line-height:1.04; letter-spacing:-0.015em;">Comments are conversations, not counters.</h2>
+        <p style="margin:0; font-size:17px; line-height:1.8; color:rgba(255,255,255,0.68); text-align:justify; hyphens:auto;">They are human interactions, thoughts, emotions and feelings transcribed directly as text — the most honest signal a post produces. No single person can read them at scale, in every language an audience writes in. So we extract them automatically.</p>
+      </div>
+      <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .7s ease .1s, transform .7s cubic-bezier(.2,.7,.2,1) .1s; border:1px solid var(--line); border-radius:12px; padding:clamp(20px,2.6vw,30px); background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));">
+        <div style="font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.40); margin-bottom:16px;">What a counter cannot hold</div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div style="border-left:2px solid var(--pulse); padding:10px 0 10px 16px; font-size:14.5px; line-height:1.6; color:rgba(255,255,255,0.80);">“Oh wow, another amazing sponsored post… not. très authentique 🙄”</div>
+          <div style="border-left:2px solid rgba(255,255,255,0.14); padding:10px 0 10px 16px; font-size:14.5px; line-height:1.6; color:rgba(255,255,255,0.62);">“Le personnel ne fait pas preuve de professionnalisme et semble manquer de compétences.”</div>
+          <div style="border-left:2px solid rgba(255,255,255,0.14); padding:10px 0 10px 16px; font-size:14.5px; line-height:1.6; color:rgba(255,255,255,0.62);">“a5yeb haja tem­chi techri ychedoulk wejhk w zid mayhebouch yjewbouk”</div>
+        </div>
+        <div style="display:flex; gap:22px; flex-wrap:wrap; margin-top:22px; padding-top:20px; border-top:1px solid var(--line);">
+          <span style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.48);">Irony</span>
+          <span style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.48);">Mixed language</span>
+          <span style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.48);">Brand vs. creator</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE SCORE ===== -->
+  <section id="score" style="padding:clamp(64px,9vw,128px) clamp(20px,5vw,64px); border-top:1px solid var(--line); background:var(--ink-2);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); max-width:66ch;">
+        <div style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:var(--pulse-hi); margin-bottom:22px;">The Influencer Perception Score</div>
+        <h2 style="margin:0 0 24px; font-family:var(--font-heading); font-weight:400; font-size:clamp(34px,4.4vw,60px); line-height:1.04; letter-spacing:-0.015em;">One number for true audience resonance.</h2>
+        <p style="margin:0; font-size:17px; line-height:1.8; color:rgba(255,255,255,0.68);">IPS runs 0 to 100. It is AI-derived from the comment body itself, weighted across four components, and comparable across creators, markets and campaigns.</p>
+      </div>
+
+      <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .7s ease .08s, transform .7s cubic-bezier(.2,.7,.2,1) .08s; margin-top:clamp(40px,5vw,72px); border:1px solid var(--line); border-radius:12px; padding:clamp(24px,3.4vw,44px); background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));">
+        <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; flex-wrap:wrap;">
+          <span style="font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.40);">0 — Rejection</span>
+          <span style="font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.40);">100 — Resonance</span>
+        </div>
+        <div style="position:relative; height:3px; margin:16px 0 0; background:linear-gradient(90deg, var(--pulse) 0%, rgba(255,255,255,0.22) 55%, rgba(255,255,255,0.45) 100%);">
+          <div style="position:absolute; left:30%; top:-9px; width:1px; height:21px; background:#fff;"></div>
+        </div>
+        <div style="display:flex; align-items:baseline; gap:10px; margin-top:18px;">
+          <span style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.52);">Sample analysis</span>
+          <span style="font-family:var(--font-heading); font-size:22px; color:var(--pulse-hi);">30</span>
+          <span style="font-size:13px; color:rgba(255,255,255,0.45);">/100 — critical perception gap</span>
+        </div>
+        <div style="height:1px; background:var(--line); margin:clamp(28px,3.4vw,40px) 0;"></div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:clamp(18px,2.4vw,32px);">
+          <div>
+            <div style="font-family:var(--font-heading); font-size:clamp(38px,4.6vw,58px); line-height:1; color:var(--pulse-hi);">40%</div>
+            <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; margin:12px 0 7px;">Sentiment</div>
+            <div style="font-size:13.5px; line-height:1.6; color:rgba(255,255,255,0.58);">Polarity weighted by emotional intensity.</div>
+          </div>
+          <div>
+            <div style="font-family:var(--font-heading); font-size:clamp(38px,4.6vw,58px); line-height:1; color:#fff;">20%</div>
+            <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; margin:12px 0 7px;">Trust</div>
+            <div style="font-size:13.5px; line-height:1.6; color:rgba(255,255,255,0.58);">Credibility and non-sponsored perception cues.</div>
+          </div>
+          <div>
+            <div style="font-family:var(--font-heading); font-size:clamp(38px,4.6vw,58px); line-height:1; color:#fff;">20%</div>
+            <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; margin:12px 0 7px;">Engagement quality</div>
+            <div style="font-size:13.5px; line-height:1.6; color:rgba(255,255,255,0.58);">Comment depth and meaningful audience signal.</div>
+          </div>
+          <div>
+            <div style="font-family:var(--font-heading); font-size:clamp(38px,4.6vw,58px); line-height:1; color:#fff;">20%</div>
+            <div style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; margin:12px 0 7px;">Brand affinity</div>
+            <div style="font-size:13.5px; line-height:1.6; color:rgba(255,255,255,0.58);">Tone of comments that mention or imply the brand.</div>
+          </div>
+        </div>
+        <div style="margin-top:clamp(24px,3vw,36px); padding-top:20px; border-top:1px solid var(--line); font-size:13px; color:rgba(255,255,255,0.45);">Extracted automatically by the engine. No manual input, no subjective interpretation.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PLATFORM / STICKY WALKTHROUGH ===== -->
+  <section id="platform" style="padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px) clamp(56px,8vw,104px); border-top:1px solid var(--line); position:relative;">
+    <div style="position:absolute; inset:0; background:radial-gradient(900px 480px at 80% 12%, rgba(232,32,74,0.13), transparent 62%); pointer-events:none;"></div>
+    <div style="position:relative; max-width:1180px; margin:0 auto;">
+      <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); max-width:60ch; margin-bottom:clamp(36px,5vw,64px);">
+        <div style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:var(--pulse-hi); margin-bottom:22px;">The platform</div>
+        <h2 style="margin:0 0 24px; font-family:var(--font-heading); font-weight:400; font-size:clamp(34px,4.4vw,60px); line-height:1.04; letter-spacing:-0.015em;">One URL in. A full perception read out.</h2>
+        <p style="margin:0; font-size:17px; line-height:1.8; color:rgba(255,255,255,0.68);">Within seconds the platform returns the IPS, the raw data behind it, and a brief an account manager can act on. Scroll to walk the interface.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:clamp(28px,4vw,64px); align-items:start;">
+
+        <div style="display:flex; flex-direction:column; gap:clamp(56px,14vh,140px); padding:clamp(20px,4vh,60px) 0;">
+          <div data-step="score" style="border-left:1px solid var(--line); padding-left:clamp(18px,2vw,28px); transition:border-color .45s ease;">
+            <div style="font-size:10.5px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.40); margin-bottom:14px;">Step 01</div>
+            <h3 style="margin:0 0 14px; font-family:var(--font-heading); font-weight:400; font-size:clamp(25px,2.8vw,36px); line-height:1.12;">The score, and the brief behind it</h3>
+            <p style="margin:0; font-size:15.5px; line-height:1.72; color:rgba(255,255,255,0.62);">A headline IPS with a plain-language executive read: fit, risk factor, and what to validate before signing the creator.</p>
+          </div>
+          <div data-step="components" style="border-left:1px solid var(--line); padding-left:clamp(18px,2vw,28px); transition:border-color .45s ease;">
+            <div style="font-size:10.5px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.40); margin-bottom:14px;">Step 02</div>
+            <h3 style="margin:0 0 14px; font-family:var(--font-heading); font-weight:400; font-size:clamp(25px,2.8vw,36px); line-height:1.12;">Four components, never a black box</h3>
+            <p style="margin:0; font-size:15.5px; line-height:1.72; color:rgba(255,255,255,0.62);">Sentiment, trust, engagement quality and brand affinity are shown separately, so you can see which one is dragging the score down.</p>
+          </div>
+          <div data-step="map" style="border-left:1px solid var(--line); padding-left:clamp(18px,2vw,28px); transition:border-color .45s ease;">
+            <div style="font-size:10.5px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.40); margin-bottom:14px;">Step 03</div>
+            <h3 style="margin:0 0 14px; font-family:var(--font-heading); font-weight:400; font-size:clamp(25px,2.8vw,36px); line-height:1.12;">The perception map</h3>
+            <p style="margin:0; font-size:15.5px; line-height:1.72; color:rgba(255,255,255,0.62);">Every comment is a dot on sentiment against trust. The upper-right zone is the valuable perception space; clustering elsewhere tells you why.</p>
+          </div>
+          <div data-step="signals" style="border-left:1px solid var(--line); padding-left:clamp(18px,2vw,28px); transition:border-color .45s ease;">
+            <div style="font-size:10.5px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.40); margin-bottom:14px;">Step 04</div>
+            <h3 style="margin:0 0 14px; font-family:var(--font-heading); font-weight:400; font-size:clamp(25px,2.8vw,36px); line-height:1.12;">Down to the individual comment</h3>
+            <p style="margin:0; font-size:15.5px; line-height:1.72; color:rgba(255,255,255,0.62);">The signal database ranks comments by emotional intensity, each tagged with sentiment, trust and whether it speaks to the brand or the creator.</p>
+          </div>
+        </div>
+
+        <div style="position:sticky; top:118px;">
+          <div style="border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#0e0c0d; box-shadow:0 30px 80px rgba(0,0,0,0.55);">
+            <div style="display:flex; align-items:center; gap:18px; padding:14px 20px; border-bottom:1px solid var(--line);">
+              <div style="display:flex; flex-direction:column; gap:2px; margin-right:auto;">
+                <div style="display:flex; align-items:baseline; gap:6px;">
+                  <span style="font-family:var(--font-heading); font-size:16px; letter-spacing:0.04em;">YKONE</span>
+                  <span style="color:rgba(255,255,255,0.25); font-size:12px;">/</span>
+                  <span style="font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:var(--pulse-hi);">Pulse</span>
+                </div>
+                <span style="font-size:7.5px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.30);">Influencer Perception Intelligence</span>
+              </div>
+              <span style="font-size:8.5px; letter-spacing:0.18em; text-transform:uppercase; color:#fff; border:1px solid rgba(232,32,74,0.55); border-radius:999px; padding:5px 11px;">IPS</span>
+              <span style="font-size:8.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.42);">Perception map</span>
+              <span style="font-size:8.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.42);">Signals</span>
+            </div>
+
+            <div style="padding:clamp(16px,2vw,24px); display:flex; flex-direction:column; gap:14px;">
+              <div data-panel="score" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; border-radius:10px; transition:box-shadow .45s ease, opacity .45s ease;">
+                <div style="border:1px solid var(--line); border-radius:10px; padding:16px; background:radial-gradient(240px 160px at 10% 10%, rgba(232,32,74,0.16), transparent 70%);">
+                  <div style="font-size:8.5px; letter-spacing:0.2em; text-transform:uppercase; color:var(--pulse-hi);">Influencer Perception Score</div>
+                  <div style="font-size:9px; line-height:1.5; color:rgba(255,255,255,0.28); margin:8px 0 10px; word-break:break-all;">https://www.tiktok.com/@creator/video/7633021074295475489</div>
+                  <div style="display:flex; align-items:baseline; gap:6px;">
+                    <span style="font-family:var(--font-heading); font-size:clamp(52px,7vw,82px); line-height:0.9; color:var(--pulse); letter-spacing:-0.03em;">30</span>
+                    <span style="font-size:19px; color:rgba(255,255,255,0.40);">/100</span>
+                  </div>
+                  <div style="display:inline-flex; align-items:center; gap:7px; margin-top:14px; border:1px solid rgba(232,32,74,0.45); border-radius:999px; padding:5px 11px;">
+                    <span style="width:5px; height:5px; border-radius:999px; background:var(--pulse-hi);"></span>
+                    <span style="font-size:9px; letter-spacing:0.14em; text-transform:uppercase; color:#fff;">Critical perception gap</span>
+                  </div>
+                  <div style="font-size:9.5px; line-height:1.6; color:rgba(255,255,255,0.34); margin-top:14px;">40% sentiment · 20% trust · 20% engagement quality · 20% brand affinity</div>
+                </div>
+                <div style="border:1px solid var(--line); border-radius:10px; padding:16px;">
+                  <div style="font-size:8.5px; letter-spacing:0.2em; text-transform:uppercase; color:var(--pulse-hi); margin-bottom:10px;">Executive perception brief</div>
+                  <p style="margin:0 0 14px; font-size:12px; line-height:1.62; color:rgba(255,255,255,0.72);">Weak fit with major trust concerns. Audience comments are 15% positive and 49% negative, with an estimated risk factor of 58%. Treat as a directional read, then validate against campaign goals and brand-safety requirements.</p>
+                  <div style="display:grid; grid-template-columns:1fr 1fr; gap:9px;">
+                    <div style="border:1px solid var(--line); border-radius:8px; padding:11px 12px;">
+                      <div style="font-family:var(--font-heading); font-size:21px;">59</div>
+                      <div style="font-size:9.5px; color:rgba(255,255,255,0.48); margin-top:3px;">Audience comments analysed</div>
+                    </div>
+                    <div style="border:1px solid var(--line); border-radius:8px; padding:11px 12px;">
+                      <div style="font-family:var(--font-heading); font-size:21px;">58%</div>
+                      <div style="font-size:9.5px; color:rgba(255,255,255,0.48); margin-top:3px;">Perception risk factor</div>
+                    </div>
+                    <div style="border:1px solid var(--line); border-radius:8px; padding:11px 12px;">
+                      <div style="font-family:var(--font-heading); font-size:21px;">Negative</div>
+                      <div style="font-size:9.5px; color:rgba(255,255,255,0.48); margin-top:3px;">Dominant audience tone</div>
+                    </div>
+                    <div style="border:1px solid var(--line); border-radius:8px; padding:11px 12px;">
+                      <div style="font-family:var(--font-heading); font-size:21px;">49%</div>
+                      <div style="font-size:9.5px; color:rgba(255,255,255,0.48); margin-top:3px;">Brand mention rate</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div data-panel="components" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:10px; border-radius:10px; transition:box-shadow .45s ease, opacity .45s ease;">
+                <div style="border:1px solid var(--line); border-radius:10px; padding:13px;">
+                  <div style="font-size:8.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.45);">Sentiment</div>
+                  <div style="font-family:var(--font-heading); font-size:30px; margin:6px 0 6px;">20</div>
+                  <div style="height:3px; background:rgba(255,255,255,0.08); border-radius:999px; overflow:hidden;"><div style="width:20%; height:100%; background:linear-gradient(90deg,var(--pulse-hi),var(--pulse));"></div></div>
+                </div>
+                <div style="border:1px solid var(--line); border-radius:10px; padding:13px;">
+                  <div style="font-size:8.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.45);">Trust / authenticity</div>
+                  <div style="font-family:var(--font-heading); font-size:30px; margin:6px 0 6px;">35</div>
+                  <div style="height:3px; background:rgba(255,255,255,0.08); border-radius:999px; overflow:hidden;"><div style="width:35%; height:100%; background:linear-gradient(90deg,var(--pulse-hi),var(--pulse));"></div></div>
+                </div>
+                <div style="border:1px solid var(--line); border-radius:10px; padding:13px;">
+                  <div style="font-size:8.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.45);">Engagement quality</div>
+                  <div style="font-family:var(--font-heading); font-size:30px; margin:6px 0 6px;">49</div>
+                  <div style="height:3px; background:rgba(255,255,255,0.08); border-radius:999px; overflow:hidden;"><div style="width:49%; height:100%; background:linear-gradient(90deg,var(--pulse-hi),var(--pulse));"></div></div>
+                </div>
+                <div style="border:1px solid var(--line); border-radius:10px; padding:13px;">
+                  <div style="font-size:8.5px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.45);">Brand affinity</div>
+                  <div style="font-family:var(--font-heading); font-size:30px; margin:6px 0 6px;">25</div>
+                  <div style="height:3px; background:rgba(255,255,255,0.08); border-radius:999px; overflow:hidden;"><div style="width:25%; height:100%; background:linear-gradient(90deg,var(--pulse-hi),var(--pulse));"></div></div>
+                </div>
+              </div>
+
+              <div data-panel="map" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:12px; border-radius:10px; transition:box-shadow .45s ease, opacity .45s ease;">
+                <div style="border:1px solid var(--line); border-radius:10px; padding:14px;">
+                  <div style="font-size:8.5px; letter-spacing:0.2em; text-transform:uppercase; color:var(--pulse-hi); margin-bottom:12px;">Sentiment distribution</div>
+                  <div style="display:flex; flex-direction:column; gap:8px;">
+                    <div style="display:flex; align-items:center; gap:9px;">
+                      <span style="font-size:8.5px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.45); width:52px;">Positive</span>
+                      <span style="flex:1; height:4px; background:rgba(255,255,255,0.08); border-radius:999px; overflow:hidden; display:block;"><span style="display:block; width:15%; height:100%; background:rgba(255,255,255,0.55);"></span></span>
+                      <span style="font-size:9.5px; color:rgba(255,255,255,0.62); width:26px; text-align:right;">15%</span>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:9px;">
+                      <span style="font-size:8.5px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.45); width:52px;">Neutral</span>
+                      <span style="flex:1; height:4px; background:rgba(255,255,255,0.08); border-radius:999px; overflow:hidden; display:block;"><span style="display:block; width:36%; height:100%; background:rgba(255,255,255,0.35);"></span></span>
+                      <span style="font-size:9.5px; color:rgba(255,255,255,0.62); width:26px; text-align:right;">36%</span>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:9px;">
+                      <span style="font-size:8.5px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.45); width:52px;">Negative</span>
+                      <span style="flex:1; height:4px; background:rgba(255,255,255,0.08); border-radius:999px; overflow:hidden; display:block;"><span style="display:block; width:49%; height:100%; background:linear-gradient(90deg,var(--pulse-hi),var(--pulse));"></span></span>
+                      <span style="font-size:9.5px; color:rgba(255,255,255,0.62); width:26px; text-align:right;">49%</span>
+                    </div>
+                  </div>
+                  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-top:16px;">
+                    <div style="border:1px solid var(--line); border-radius:8px; padding:10px;">
+                      <div style="font-family:var(--font-heading); font-size:22px;">59</div>
+                      <div style="font-size:7.5px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.40); margin-top:3px;">Total comments</div>
+                    </div>
+                    <div style="border:1px solid var(--line); border-radius:8px; padding:10px;">
+                      <div style="font-family:var(--font-heading); font-size:22px;">29</div>
+                      <div style="font-size:7.5px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.40); margin-top:3px;">Brand signals</div>
+                    </div>
+                    <div style="border:1px solid var(--line); border-radius:8px; padding:10px;">
+                      <div style="font-family:var(--font-heading); font-size:22px;">30</div>
+                      <div style="font-size:7.5px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.40); margin-top:3px;">Creator signals</div>
+                    </div>
+                  </div>
+                </div>
+                <div style="border:1px solid var(--line); border-radius:10px; padding:14px;">
+                  <div style="font-size:8.5px; letter-spacing:0.2em; text-transform:uppercase; color:var(--pulse-hi);">Perception map — sentiment × trust</div>
+                  <div style="font-size:9.5px; line-height:1.55; color:rgba(255,255,255,0.42); margin:7px 0 12px;">Each dot is a comment. The upper-right zone is the most valuable perception space.</div>
+                  <div style="position:relative; height:170px; border:1px solid var(--line); border-radius:8px; background:linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px) 0 0/25% 100%, linear-gradient(180deg, rgba(255,255,255,0.03) 1px, transparent 1px) 0 0/100% 25%;">
+                    <div style="position:absolute; right:0; top:0; width:42%; height:42%; background:radial-gradient(circle at 70% 30%, rgba(232,32,74,0.16), transparent 70%); border-radius:8px;"></div>
+                    <span style="position:absolute; left:26%; top:22%; width:5px; height:5px; border-radius:999px; background:#fff;"></span>
+                    <span style="position:absolute; left:34%; top:30%; width:5px; height:5px; border-radius:999px; background:#fff;"></span>
+                    <span style="position:absolute; left:48%; top:16%; width:5px; height:5px; border-radius:999px; background:#fff;"></span>
+                    <span style="position:absolute; left:57%; top:12%; width:5px; height:5px; border-radius:999px; background:#fff;"></span>
+                    <span style="position:absolute; left:41%; top:57%; width:5px; height:5px; border-radius:999px; background:rgba(255,255,255,0.45);"></span>
+                    <span style="position:absolute; left:52%; top:61%; width:5px; height:5px; border-radius:999px; background:rgba(255,255,255,0.45);"></span>
+                    <span style="position:absolute; left:8%; bottom:9%; width:6px; height:6px; border-radius:999px; background:var(--pulse);"></span>
+                    <span style="position:absolute; left:13%; bottom:9%; width:6px; height:6px; border-radius:999px; background:var(--pulse);"></span>
+                    <span style="position:absolute; left:19%; bottom:9%; width:6px; height:6px; border-radius:999px; background:var(--pulse);"></span>
+                    <span style="position:absolute; left:24%; bottom:9%; width:6px; height:6px; border-radius:999px; background:var(--pulse);"></span>
+                    <span style="position:absolute; left:31%; bottom:9%; width:6px; height:6px; border-radius:999px; background:var(--pulse);"></span>
+                    <span style="position:absolute; left:44%; bottom:6%; width:6px; height:6px; border-radius:999px; background:var(--pulse);"></span>
+                    <span style="position:absolute; right:12px; bottom:8px; font-size:7.5px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.35);">Trust / authenticity →</span>
+                  </div>
+                  <div style="display:flex; gap:14px; margin-top:10px;">
+                    <span style="display:inline-flex; align-items:center; gap:5px; font-size:7.5px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.40);"><span style="width:5px;height:5px;border-radius:999px;background:#fff;"></span>Positive</span>
+                    <span style="display:inline-flex; align-items:center; gap:5px; font-size:7.5px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.40);"><span style="width:5px;height:5px;border-radius:999px;background:rgba(255,255,255,0.45);"></span>Neutral</span>
+                    <span style="display:inline-flex; align-items:center; gap:5px; font-size:7.5px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.40);"><span style="width:5px;height:5px;border-radius:999px;background:var(--pulse);"></span>Negative</span>
+                  </div>
+                </div>
+              </div>
+
+              <div data-panel="signals" style="border:1px solid var(--line); border-radius:10px; padding:14px; transition:box-shadow .45s ease, opacity .45s ease;">
+                <div style="font-size:8.5px; letter-spacing:0.2em; text-transform:uppercase; color:var(--pulse-hi);">Signal database</div>
+                <div style="font-size:9.5px; color:rgba(255,255,255,0.42); margin:6px 0 12px;">Top comments sorted by emotional intensity, with sentiment and trust metadata.</div>
+                <div style="display:flex; flex-direction:column; gap:9px;">
+                  <div style="border:1px solid var(--line); border-left:2px solid var(--pulse); border-radius:8px; padding:11px 12px;">
+                    <div style="display:flex; gap:6px; flex-wrap:wrap; margin-bottom:8px;">
+                      <span style="font-size:7.5px; letter-spacing:0.14em; text-transform:uppercase; color:#fff; border:1px solid rgba(232,32,74,0.5); border-radius:4px; padding:2px 6px;">Negative</span>
+                      <span style="font-size:7.5px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.5); border:1px solid var(--line); border-radius:4px; padding:2px 6px;">Brand</span>
+                      <span style="font-size:7.5px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.5); border:1px solid var(--line); border-radius:4px; padding:2px 6px;">Intensity 90%</span>
+                      <span style="font-size:7.5px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.5); border:1px solid var(--line); border-radius:4px; padding:2px 6px;">Trust 5%</span>
+                    </div>
+                    <div style="font-size:11px; line-height:1.55; color:rgba(255,255,255,0.72);">customer service 0 inchallah nhar fi tounes yefhmou chmaaneha ykhaliw customer aal rahtou</div>
+                  </div>
+                  <div style="border:1px solid var(--line); border-left:2px solid var(--pulse); border-radius:8px; padding:11px 12px;">
+                    <div style="display:flex; gap:6px; flex-wrap:wrap; margin-bottom:8px;">
+                      <span style="font-size:7.5px; letter-spacing:0.14em; text-transform:uppercase; color:#fff; border:1px solid rgba(232,32,74,0.5); border-radius:4px; padding:2px 6px;">Negative</span>
+                      <span style="font-size:7.5px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.5); border:1px solid var(--line); border-radius:4px; padding:2px 6px;">Brand</span>
+                      <span style="font-size:7.5px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.5); border:1px solid var(--line); border-radius:4px; padding:2px 6px;">Intensity 82%</span>
+                      <span style="font-size:7.5px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.5); border:1px solid var(--line); border-radius:4px; padding:2px 6px;">Trust 10%</span>
+                    </div>
+                    <div style="font-size:11px; line-height:1.55; color:rgba(255,255,255,0.72);">Le personnel ne fait pas preuve de professionnalisme et semble manquer de compétences.</div>
+                  </div>
+                  <div style="border:1px solid var(--line); border-left:2px solid rgba(255,255,255,0.18); border-radius:8px; padding:11px 12px;">
+                    <div style="display:flex; gap:6px; flex-wrap:wrap; margin-bottom:8px;">
+                      <span style="font-size:7.5px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.7); border:1px solid var(--line); border-radius:4px; padding:2px 6px;">Neutral</span>
+                      <span style="font-size:7.5px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.5); border:1px solid var(--line); border-radius:4px; padding:2px 6px;">Creator</span>
+                      <span style="font-size:7.5px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.5); border:1px solid var(--line); border-radius:4px; padding:2px 6px;">Intensity 41%</span>
+                      <span style="font-size:7.5px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.5); border:1px solid var(--line); border-radius:4px; padding:2px 6px;">Trust 48%</span>
+                    </div>
+                    <div style="font-size:11px; line-height:1.55; color:rgba(255,255,255,0.72);">Oh wow, another amazing sponsored post… not. très authentique 🙄</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section style="padding:clamp(64px,9vw,128px) clamp(20px,5vw,64px); border-top:1px solid var(--line); background:var(--ink-2);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); max-width:60ch;">
+        <div style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:var(--pulse-hi); margin-bottom:22px;">The pipeline</div>
+        <h2 style="margin:0; font-family:var(--font-heading); font-weight:400; font-size:clamp(34px,4.4vw,58px); line-height:1.04; letter-spacing:-0.015em;">From raw comment to comparable score, in six steps.</h2>
+      </div>
+      <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .7s ease .08s, transform .7s cubic-bezier(.2,.7,.2,1) .08s; display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:1px; margin-top:clamp(36px,5vw,64px); background:var(--line); border:1px solid var(--line);">
+        <div style="background:var(--ink-2); padding:clamp(20px,2.4vw,30px);">
+          <div style="font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.35);">01</div>
+          <div style="font-family:var(--font-heading); font-size:23px; margin:10px 0 9px;">Collect</div>
+          <div style="font-size:13px; line-height:1.6; color:rgba(255,255,255,0.55);">Real-time API integration pulls the post's public comments.</div>
+        </div>
+        <div style="background:var(--ink-2); padding:clamp(20px,2.4vw,30px);">
+          <div style="font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.35);">02</div>
+          <div style="font-family:var(--font-heading); font-size:23px; margin:10px 0 9px;">Clean</div>
+          <div style="font-size:13px; line-height:1.6; color:rgba(255,255,255,0.55);">Unstructured text is normalised and structured.</div>
+        </div>
+        <div style="background:linear-gradient(180deg, rgba(232,32,74,0.16), rgba(232,32,74,0.05)); padding:clamp(20px,2.4vw,30px);">
+          <div style="font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--pulse-hi);">03</div>
+          <div style="font-family:var(--font-heading); font-size:23px; margin:10px 0 9px;">Extract</div>
+          <div style="font-size:13px; line-height:1.6; color:rgba(255,255,255,0.72);">The engine pulls five signals: sentiment, emotional intensity, trust level, brand mention, brand sentiment.</div>
+        </div>
+        <div style="background:var(--ink-2); padding:clamp(20px,2.4vw,30px);">
+          <div style="font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.35);">04</div>
+          <div style="font-family:var(--font-heading); font-size:23px; margin:10px 0 9px;">Convert</div>
+          <div style="font-size:13px; line-height:1.6; color:rgba(255,255,255,0.55);">Signals are mapped onto a common 0–1 scale.</div>
+        </div>
+        <div style="background:var(--ink-2); padding:clamp(20px,2.4vw,30px);">
+          <div style="font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.35);">05</div>
+          <div style="font-family:var(--font-heading); font-size:23px; margin:10px 0 9px;">Combine</div>
+          <div style="font-size:13px; line-height:1.6; color:rgba(255,255,255,0.55);">Weighted aggregation produces the IPS, 0 to 100.</div>
+        </div>
+        <div style="background:var(--ink-2); padding:clamp(20px,2.4vw,30px);">
+          <div style="font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.35);">06</div>
+          <div style="font-family:var(--font-heading); font-size:23px; margin:10px 0 9px;">Display</div>
+          <div style="font-size:13px; line-height:1.6; color:rgba(255,255,255,0.55);">The interactive dashboard distributes it to the team.</div>
+        </div>
+      </div>
+
+      <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .7s ease .12s, transform .7s cubic-bezier(.2,.7,.2,1) .12s; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(28px,5vw,72px); align-items:center; margin-top:clamp(52px,7vw,96px); padding-top:clamp(40px,5vw,72px); border-top:1px solid var(--line);">
+        <div>
+          <div style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:var(--pulse-hi); margin-bottom:22px;">Contextual intelligence</div>
+          <h3 style="margin:0 0 22px; font-family:var(--font-heading); font-weight:400; font-size:clamp(30px,3.6vw,46px); line-height:1.08; letter-spacing:-0.015em;">Real-world nuance, not keyword counting.</h3>
+          <p style="margin:0; font-size:16.5px; line-height:1.78; color:rgba(255,255,255,0.66); text-align:justify; hyphens:auto;">Trained on real examples rather than traditional fine-tuning. Pulse handles mixed languages, detects sarcasm, and separates what an audience thinks about the creator from what it thinks about the brand — inside the same sentence.</p>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div style="border:1px solid var(--line); border-radius:10px; padding:16px 18px; font-family:var(--font-heading); font-size:19px; font-style:italic; line-height:1.4; color:rgba(255,255,255,0.86);">“Oh wow, another amazing sponsored post… not. très authentique 🙄”</div>
+          <div style="display:flex; align-items:center; gap:14px; border:1px solid var(--line); border-radius:10px; padding:14px 18px;">
+            <span style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.40); width:126px;">Language</span>
+            <span style="font-size:14px; color:#fff;">Multilingual — understood</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:14px; border:1px solid var(--line); border-radius:10px; padding:14px 18px;">
+            <span style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.40); width:126px;">Irony</span>
+            <span style="font-size:14px; color:var(--pulse-hi);">Detected — negative sentiment</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:14px; border:1px solid var(--line); border-radius:10px; padding:14px 18px;">
+            <span style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.40); width:126px;">Attribution</span>
+            <span style="font-size:14px; color:#fff;">Brand separated from creator</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ROADMAP ===== -->
+  <section id="roadmap" style="padding:clamp(64px,9vw,128px) clamp(20px,5vw,64px); border-top:1px solid var(--line);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); max-width:56ch;">
+        <div style="font-size:11px; letter-spacing:0.24em; text-transform:uppercase; color:var(--pulse-hi); margin-bottom:22px;">Where this goes</div>
+        <h2 style="margin:0; font-family:var(--font-heading); font-weight:400; font-size:clamp(34px,4.4vw,58px); line-height:1.04; letter-spacing:-0.015em;">From a single post to the whole agency workflow.</h2>
+      </div>
+      <div data-reveal style="opacity:0; transform:translateY(18px); transition:opacity .7s ease .08s, transform .7s cubic-bezier(.2,.7,.2,1) .08s; display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:clamp(20px,2.6vw,34px); margin-top:clamp(36px,5vw,64px);">
+        <div style="border-top:2px solid var(--pulse); padding-top:20px;">
+          <div style="font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--pulse-hi); margin-bottom:12px;">Step 01 — Today</div>
+          <div style="font-family:var(--font-heading); font-size:25px; line-height:1.15; margin-bottom:10px;">Single URL analysis</div>
+          <div style="font-size:13.5px; line-height:1.65; color:rgba(255,255,255,0.58);">Real-time processing of individual posts.</div>
+        </div>
+        <div style="border-top:2px solid rgba(255,255,255,0.22); padding-top:20px;">
+          <div style="font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.40); margin-bottom:12px;">Step 02 — Next</div>
+          <div style="font-family:var(--font-heading); font-size:25px; line-height:1.15; margin-bottom:10px;">Full profile analysis</div>
+          <div style="font-size:13.5px; line-height:1.65; color:rgba(255,255,255,0.58);">An influencer's entire content history, processed automatically.</div>
+        </div>
+        <div style="border-top:2px solid rgba(255,255,255,0.14); padding-top:20px;">
+          <div style="font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.40); margin-bottom:12px;">Step 03 — Future</div>
+          <div style="font-family:var(--font-heading); font-size:25px; line-height:1.15; margin-bottom:10px;">Brand–influencer IPS matching</div>
+          <div style="font-size:13.5px; line-height:1.65; color:rgba(255,255,255,0.58);">Aligning the emotional texture of a community with specific brand values.</div>
+        </div>
+        <div style="border-top:2px solid rgba(255,255,255,0.08); padding-top:20px;">
+          <div style="font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.40); margin-bottom:12px;">Step 04 — Future</div>
+          <div style="font-family:var(--font-heading); font-size:25px; line-height:1.15; margin-bottom:10px;">Automated agency integration</div>
+          <div style="font-size:13.5px; line-height:1.65; color:rgba(255,255,255,0.58);">Full workflow embedding, from brief to reporting.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CLOSE ===== -->
+  <section id="close" style="position:relative; padding:clamp(80px,11vw,152px) clamp(20px,5vw,64px); border-top:1px solid var(--line);">
+    <div style="position:absolute; inset:0; background:radial-gradient(900px 460px at 50% 100%, rgba(232,32,74,0.20), transparent 65%); pointer-events:none;"></div>
+    <div data-reveal style="position:relative; opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); max-width:1180px; margin:0 auto; text-align:center;">
+      <h2 style="margin:0 auto; max-width:26ch; font-family:var(--font-heading); font-weight:400; font-style:italic; font-size:clamp(38px,5.6vw,78px); line-height:1.06; letter-spacing:-0.02em;">Winning in 2026 requires a score, not a gut feeling.</h2>
+      <p style="margin:30px auto 0; max-width:58ch; font-size:17px; line-height:1.75; color:rgba(255,255,255,0.66);">Run one post through Pulse and see the perception read your reporting is missing. Or ask us to score the creators already on your shortlist.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:40px;">
+        <a href="#top" style="display:inline-flex; align-items:center; gap:10px; padding:16px 30px; border-radius:8px; background:linear-gradient(180deg, var(--pulse-hi), var(--pulse)); color:#fff; font-size:11.5px; letter-spacing:0.2em; text-transform:uppercase;" style-hover="filter:brightness(1.08);">Analyse a post →</a>
+        <a href="#close" style="display:inline-flex; align-items:center; gap:10px; padding:16px 30px; border-radius:8px; border:1px solid rgba(255,255,255,0.28); color:#fff; font-size:11.5px; letter-spacing:0.2em; text-transform:uppercase;" style-hover="border-color:var(--pulse-hi); background:rgba(232,32,74,0.10);">Request a demo</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="display:flex; flex-wrap:wrap; gap:16px; justify-content:space-between; align-items:center; padding:26px clamp(20px,5vw,64px); border-top:1px solid var(--line);">
+    <span style="font-size:9.5px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.34);">Ykone Pulse — Influencer Perception Intelligence</span>
+    <span style="font-size:9.5px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.34);">Out of the brief</span>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#e8204a&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[[&quot;#e8204a&quot;,&quot;#ff5f7e&quot;],[&quot;#c9a227&quot;,&quot;#e6c667&quot;],[&quot;#2f6fed&quot;,&quot;#6f9dff&quot;]],&quot;section&quot;:&quot;Identity&quot;},&quot;reveal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;walkthrough&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const root = document.documentElement;
+    if (this.props.accent) root.style.setProperty('--pulse', this.props.accent);
+    if (this.props.accentHi) root.style.setProperty('--pulse-hi', this.props.accentHi);
+    this.setupReveal();
+    this.setupWalkthrough();
+  }
+  componentDidUpdate() {
+    const root = document.documentElement;
+    if (this.props.accent) root.style.setProperty('--pulse', this.props.accent);
+  }
+  setupReveal() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    const show = el => { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; };
+    if (this.props.reveal === false || !('IntersectionObserver' in window)) { els.forEach(show); return; }
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    els.forEach(el => io.observe(el));
+    // safety: anything still hidden after 3s reveals anyway
+    setTimeout(() => els.forEach(el => { if (el.style.opacity !== '1') show(el); }), 3000);
+  }
+  setupWalkthrough() {
+    if (this.props.walkthrough === false || !('IntersectionObserver' in window)) return;
+    const steps = Array.from(document.querySelectorAll('[data-step]'));
+    const panels = {};
+    document.querySelectorAll('[data-panel]').forEach(p => { panels[p.dataset.panel] = p; });
+    const dim = () => Object.values(panels).forEach(p => {
+      p.style.opacity = '0.34'; p.style.boxShadow = 'none';
+    });
+    const focus = key => {
+      dim();
+      steps.forEach(s => { s.style.borderColor = s.dataset.step === key ? 'var(--pulse)' : 'var(--line)'; });
+      const p = panels[key];
+      if (p) { p.style.opacity = '1'; p.style.boxShadow = '0 0 0 1px rgba(232,32,74,0.45)'; }
+    };
+    focus('score');
+    const io = new IntersectionObserver(entries => {
+      const vis = entries.filter(e => e.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (vis) focus(vis.target.dataset.step);
+    }, { rootMargin: '-42% 0px -42% 0px', threshold: [0, 0.2, 0.6, 1] });
+    steps.forEach(s => io.observe(s));
+  }
+}
+</script>
+</body>
+</html>

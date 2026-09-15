@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/classical-d23ae9e6-1173-4d13-8678-c885c65ba635/styles.css">
+<script src="_ds/classical-d23ae9e6-1173-4d13-8678-c885c65ba635/_ds_bundle.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<script src="./doc-page.js"></script>
+<style>
+doc-page:not(:defined){ visibility:hidden; }
+a{ color:var(--color-accent-700); }
+a:hover{ color:var(--color-text); }
+</style>
+</helmet>
+
+<doc-page margin="0.85in">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding-bottom:10px; border-bottom:1px solid var(--color-divider);">
+    <span style="font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--color-accent-700);">Ykone Pulse</span>
+    <span style="font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--color-neutral-600);">Web content blueprint</span>
+  </div>
+
+  <h1 style="font-family:var(--font-heading); font-weight:400; font-size:46px; line-height:1.05; letter-spacing:-0.015em; margin:34px 0 18px;">Deck to landing page: a section-by-section blueprint</h1>
+  <p style="font-size:14.5px; line-height:1.75; color:var(--color-neutral-700); max-width:70ch; margin:0 0 10px; text-align:justify; hyphens:auto;">Source: the twelve-slide <em>Out of the Brief</em> deck. Target: one vertical scroll, in the visual identity of slides 8 and 9 — near-black ground, crimson accent, serif display type, hairline-bordered panels. Copy below is final and can be pasted as-is; layout notes are written for Framer or Canva Websites. Nothing is invented: every figure comes from the demo analysis in the deck and is labelled as a sample.</p>
+
+  <hr class="hr">
+
+  <h2 style="font-family:var(--font-heading); font-weight:500; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:var(--color-accent-700); margin:26px 0 14px;">01 · Hero</h2>
+  <p style="font-size:13.5px; line-height:1.7; color:var(--color-neutral-700); margin:0 0 14px;"><strong>Objective:</strong> state what Pulse measures in one line and put the product's own entry point — a post URL field — above the fold, so the page opens on the product rather than on a promise.</p>
+  <table class="table" style="width:100%; font-size:13px;">
+    <tbody>
+      <tr><td style="width:150px; color:var(--color-neutral-600);">Eyebrow</td><td>Brand–Influencer Fit Intelligence</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">H1</td><td>Measure the <em>subtext</em> behind influence.</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Sub</td><td>Paste a TikTok or Instagram post URL. Pulse reads the public comments, interprets multilingual audience reaction, and returns an Influencer Perception Score — a weighted read of sentiment, authenticity, engagement quality and brand affinity.</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Primary CTA</td><td>Analyse perception →</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Panel</td><td>What the score weighs — 40% sentiment polarity × emotional intensity · 20% trust and authenticity signals · 20% engagement quality and comment depth · 20% brand affinity in mentioned comments</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:13px; line-height:1.7; margin:14px 0 0;"><strong>Layout &amp; interaction:</strong> two columns — headline left (55–60%), a bordered input card right. Crimson radial glow behind the top-left corner, no gradient wash across the whole section. Sticky header from scroll position zero. H1, sub and card fade up in 60 ms increments on load. The CTA anchors down to the platform section rather than submitting.</p>
+
+  <h2 style="font-family:var(--font-heading); font-weight:500; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:var(--color-accent-700); margin:30px 0 14px;">02 · The problem</h2>
+  <p style="font-size:13.5px; line-height:1.7; color:var(--color-neutral-700); margin:0 0 14px;"><strong>Objective:</strong> name the decision that gets made on instinct, then show why the existing metrics cannot inform it. Slides 2 and 3, merged.</p>
+  <table class="table" style="width:100%; font-size:13px;">
+    <tbody>
+      <tr><td style="width:150px; color:var(--color-neutral-600);">Eyebrow</td><td>The decision</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">H2</td><td>Every campaign narrows to one question, answered on instinct.</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Body</td><td>Hundreds of clients, each with a specific budget and a distinct objective, funnel into a single choice made by one account manager: which influencer. Today that choice rests on gut feel rather than verifiable consumer perception — and the market is oversaturated enough that a follower count tells you almost nothing meaningful.</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Column A</td><td>Traditional KPIs — Reach &amp; follower count · Likes &amp; views · Engagement rate. Measures passive consumption · Treats all interactions equally · Measures potential, not impact</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Column B</td><td>Perception intelligence — Sentiment · Trust · Authenticity. Quantifies human emotion · Measures true audience resonance · Actionable, campaign to campaign</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Pull quote</td><td>Gut feel is not a strategy.</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:13px; line-height:1.7; margin:14px 0 0;"><strong>Layout &amp; interaction:</strong> headline left, body right. Below it, the comparison as two columns separated by a single vertical hairline — left column set in grey at 40% opacity, right column in white, so obsolescence reads visually. The funnel becomes a row of pill chips (“Hundreds of clients”, “Specific budgets”, “Distinct objectives”) ending in a crimson-outlined “→ Which influencer?”. Pull quote sits alone above a hairline, italic, large, max 22 characters per line.</p>
+
+  <h2 style="font-family:var(--font-heading); font-weight:500; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:var(--color-accent-700); margin:30px 0 14px;">03 · The untapped signal</h2>
+  <p style="font-size:13.5px; line-height:1.7; color:var(--color-neutral-700); margin:0 0 14px;"><strong>Objective:</strong> establish comments as the honest data source, and show real ones so the reader feels the multilingual, ironic mess the engine has to read.</p>
+  <table class="table" style="width:100%; font-size:13px;">
+    <tbody>
+      <tr><td style="width:150px; color:var(--color-neutral-600);">H2</td><td>Comments are conversations, not counters.</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Body</td><td>They are human interactions, thoughts, emotions and feelings transcribed directly as text — the most honest signal a post produces. No single person can read them at scale, in every language an audience writes in. So we extract them automatically.</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Evidence</td><td>Three real comments from the demo set, tagged Irony · Mixed language · Brand vs. creator</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:13px; line-height:1.7; margin:14px 0 0;"><strong>Layout &amp; interaction:</strong> text left, comment stack right in a bordered card; each comment carries a left rule — crimson for negative, grey for neutral. Fade up as one group. Optional: the first comment's rule animates in a beat after the others.</p>
+
+  <h2 style="font-family:var(--font-heading); font-weight:500; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:var(--color-accent-700); margin:30px 0 14px;">04 · The score</h2>
+  <p style="font-size:13.5px; line-height:1.7; color:var(--color-neutral-700); margin:0 0 14px;"><strong>Objective:</strong> define IPS and its weighting before the product appears, so the dashboard reads as evidence rather than decoration.</p>
+  <table class="table" style="width:100%; font-size:13px;">
+    <tbody>
+      <tr><td style="width:150px; color:var(--color-neutral-600);">Eyebrow</td><td>The Influencer Perception Score</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">H2</td><td>One number for true audience resonance.</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Body</td><td>IPS runs 0 to 100. It is AI-derived from the comment body itself, weighted across four components, and comparable across creators, markets and campaigns.</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Scale</td><td>0 — Rejection … 100 — Resonance. Sample analysis: 30/100 — critical perception gap</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Components</td><td>40% Sentiment — polarity weighted by emotional intensity · 20% Trust — credibility and non-sponsored perception cues · 20% Engagement quality — comment depth and meaningful audience signal · 20% Brand affinity — tone of comments that mention or imply the brand</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Footnote</td><td>Extracted automatically by the engine. No manual input, no subjective interpretation.</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:13px; line-height:1.7; margin:14px 0 0;"><strong>Layout &amp; interaction:</strong> the deck's gauge becomes a horizontal 0–100 rule with a single white marker — cheaper to build and truer to the hairline language than a dial. Four components in one row of large percentage figures. On scroll, the marker slides from 0 to its position and the percentages count up once.</p>
+
+  <h2 style="font-family:var(--font-heading); font-weight:500; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:var(--color-accent-700); margin:30px 0 14px;">05 · The platform — sticky walkthrough</h2>
+  <p style="font-size:13.5px; line-height:1.7; color:var(--color-neutral-700); margin:0 0 14px;"><strong>Objective:</strong> the page's centre of gravity. Slides 8 and 9 become one pinned interface that the copy walks through, so a reader understands the product without a demo call.</p>
+  <table class="table" style="width:100%; font-size:13px;">
+    <tbody>
+      <tr><td style="width:150px; color:var(--color-neutral-600);">Eyebrow</td><td>The platform</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">H2</td><td>One URL in. A full perception read out.</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Body</td><td>Within seconds the platform returns the IPS, the raw data behind it, and a brief an account manager can act on. Scroll to walk the interface.</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Step 01</td><td>The score, and the brief behind it — A headline IPS with a plain-language executive read: fit, risk factor, and what to validate before signing the creator.</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Step 02</td><td>Four components, never a black box — Sentiment, trust, engagement quality and brand affinity are shown separately, so you can see which one is dragging the score down.</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Step 03</td><td>The perception map — Every comment is a dot on sentiment against trust. The upper-right zone is the valuable perception space; clustering elsewhere tells you why.</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Step 04</td><td>Down to the individual comment — The signal database ranks comments by emotional intensity, each tagged with sentiment, trust and whether it speaks to the brand or the creator.</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Demo data</td><td>IPS 30/100 · 59 comments analysed · 58% perception risk factor · Negative dominant tone · 49% brand mention rate · Sentiment 20 / Trust 35 / Engagement quality 49 / Brand affinity 25 · 15% positive, 36% neutral, 49% negative</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:13px; line-height:1.7; margin:14px 0 0;"><strong>Layout &amp; interaction:</strong> two columns — four step blocks scrolling on the left (roughly one viewport of travel each), the dashboard pinned on the right at <code>top: 118px</code>. As each step enters the middle band of the viewport its left rule turns crimson and the matching dashboard panel lifts to full opacity with a 1px crimson ring, while the other panels drop to ~34%. In Framer this is a scroll section with four appear-triggered variants on the sticky frame. Below ~900px the dashboard un-pins and each step's panel sits directly under its text.</p>
+
+  <h2 style="font-family:var(--font-heading); font-weight:500; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:var(--color-accent-700); margin:30px 0 14px;">06 · Pipeline &amp; contextual intelligence</h2>
+  <p style="font-size:13.5px; line-height:1.7; color:var(--color-neutral-700); margin:0 0 14px;"><strong>Objective:</strong> answer “how does it actually work” for the technical reader, and pre-empt the obvious objection — that sarcasm and mixed language break sentiment tools.</p>
+  <table class="table" style="width:100%; font-size:13px;">
+    <tbody>
+      <tr><td style="width:150px; color:var(--color-neutral-600);">H2</td><td>From raw comment to comparable score, in six steps.</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Steps</td><td>01 Collect — real-time API integration pulls the post's public comments · 02 Clean — unstructured text is normalised and structured · 03 Extract — the engine pulls five signals: sentiment, emotional intensity, trust level, brand mention, brand sentiment · 04 Convert — signals mapped onto a common 0–1 scale · 05 Combine — weighted aggregation produces the IPS, 0 to 100 · 06 Display — the interactive dashboard distributes it to the team</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">H3</td><td>Real-world nuance, not keyword counting.</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Body</td><td>Trained on real examples rather than traditional fine-tuning. Pulse handles mixed languages, detects sarcasm, and separates what an audience thinks about the creator from what it thinks about the brand — inside the same sentence.</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Worked example</td><td>“Oh wow, another amazing sponsored post… not. très authentique 🙄” → Language: multilingual, understood · Irony: detected, negative sentiment · Attribution: brand separated from creator</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:13px; line-height:1.7; margin:14px 0 0;"><strong>Layout &amp; interaction:</strong> six equal cells in a hairline grid, no chevron arrows — step 03 carries a faint crimson fill as the deck's red arrow did. Cells fade in left to right, 40 ms apart. Contextual intelligence below: copy left, the quoted comment and its three verdict rows right, each row revealing in sequence so the reader watches the machine reason.</p>
+
+  <h2 style="font-family:var(--font-heading); font-weight:500; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:var(--color-accent-700); margin:30px 0 14px;">07 · Roadmap</h2>
+  <p style="font-size:13.5px; line-height:1.7; color:var(--color-neutral-700); margin:0 0 14px;"><strong>Objective:</strong> show that today's single-URL tool is step one of an agency-wide system — the internal-audience payload, and reassurance for a client betting on it.</p>
+  <table class="table" style="width:100%; font-size:13px;">
+    <tbody>
+      <tr><td style="width:150px; color:var(--color-neutral-600);">H2</td><td>From a single post to the whole agency workflow.</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Steps</td><td>01 Today — Single URL analysis: real-time processing of individual posts · 02 Next — Full profile analysis: an influencer's entire content history, processed automatically · 03 Future — Brand–influencer IPS matching: aligning the emotional texture of a community with specific brand values · 04 Future — Automated agency integration: full workflow embedding, from brief to reporting</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:13px; line-height:1.7; margin:14px 0 0;"><strong>Layout &amp; interaction:</strong> four columns, each headed by a 2px top rule that fades from crimson (today) to near-invisible (step 04) — the deck's staircase expressed as tonal weight instead of drawn blocks. Rules draw left to right on entry.</p>
+
+  <h2 style="font-family:var(--font-heading); font-weight:500; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:var(--color-accent-700); margin:30px 0 14px;">08 · Close</h2>
+  <p style="font-size:13.5px; line-height:1.7; color:var(--color-neutral-700); margin:0 0 14px;"><strong>Objective:</strong> one decision, two doors — self-serve the product, or hand us a shortlist.</p>
+  <table class="table" style="width:100%; font-size:13px;">
+    <tbody>
+      <tr><td style="width:150px; color:var(--color-neutral-600);">H2</td><td>Winning in 2026 requires a score, not a gut feeling.</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Body</td><td>Run one post through Pulse and see the perception read your reporting is missing. Or ask us to score the creators already on your shortlist.</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">CTAs</td><td>Analyse a post → (primary, returns to the hero field) · Request a demo (secondary outline)</td></tr>
+      <tr><td style="color:var(--color-neutral-600);">Footer</td><td>Ykone Pulse — Influencer Perception Intelligence · Out of the brief</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:13px; line-height:1.7; margin:14px 0 0;"><strong>Layout &amp; interaction:</strong> centred, italic display type at the largest size on the page, crimson glow rising from the bottom edge. Buttons side by side. Hairline footer, no link farm.</p>
+
+  <hr class="hr" style="margin-top:34px;">
+  <h2 style="font-family:var(--font-heading); font-weight:500; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:var(--color-accent-700); margin:26px 0 14px;">Build notes</h2>
+  <ul style="font-size:13px; line-height:1.8; color:var(--color-neutral-700); padding-left:18px; margin:0;">
+    <li><strong>Palette:</strong> ground #0b0a0b, panel #121011, hairline rgba(255,255,255,0.10), accent #e8204a with #ff5f7e for highlights and gradient tops. No third colour.</li>
+    <li><strong>Type:</strong> Cormorant Garamond for display and figures, set at regular weight — never bold; Lora for body at 16–17.5px, 1.75 line-height. Small labels are 10–11px uppercase at 0.2em tracking.</li>
+    <li><strong>Surfaces:</strong> every panel is a 1px hairline on a near-transparent white fill (0.04 → 0.01 vertical gradient). No solid crimson fills except the two primary buttons.</li>
+    <li><strong>Motion:</strong> one gesture only — 18px fade-up on entry, 0.7–0.8s, staggered 60–120ms within a group. The sticky walkthrough is the single exception and the page's only scroll-driven effect.</li>
+    <li><strong>Honesty:</strong> the 30/100 case is labelled “sample analysis” everywhere it appears. Add client names, campaign counts or volume processed only once you have them — a proof band under the close is the place for it.</li>
+  </ul>
+</doc-page>
+</x-dc>
+</body>
+</html>
